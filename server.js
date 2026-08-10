@@ -6,7 +6,7 @@ const app = express();
 const PORT = process.env.PORT || 7050;
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname)); // serves index.html and any static files from root
 
 // --- Keys ---
 const KEYS_FILE = 'keys.json';
@@ -42,9 +42,9 @@ function isAuthorized(req) {
   return false;
 }
 
-// ---- API Routes (for the dashboard) ----
+// ---- API Routes ----
 
-// GET /config – returns JSON settings (for modded APK)
+// GET /config – for modded APK
 app.get('/config', (req, res) => {
   if (!isAuthorized(req)) {
     return res.status(403).json({ error: 'Not authorized' });
@@ -57,7 +57,7 @@ app.get('/config', (req, res) => {
   }
 });
 
-// POST /settings – update toggles (for dashboard)
+// POST /settings – update toggles
 app.post('/settings', (req, res) => {
   if (!isAuthorized(req)) {
     return res.status(403).json({ error: 'Not authorized' });
@@ -94,7 +94,7 @@ app.post('/activate', (req, res) => {
   }
 });
 
-// GET /admin/generate-key – generate new key
+// GET /admin/generate-key
 app.get('/admin/generate-key', (req, res) => {
   const secret = req.query.secret;
   if (secret !== 'admin123') {
@@ -106,15 +106,15 @@ app.get('/admin/generate-key', (req, res) => {
   res.json({ key: newKey, message: 'New key generated' });
 });
 
-// GET /ip – returns the client's IP (for dashboard)
+// GET /ip – return client IP
 app.get('/ip', (req, res) => {
   const ip = getClientIP(req);
   res.json({ ip });
 });
 
-// ---- Dashboard HTML (served at root) ----
+// ---- Serve index.html for root ----
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(PORT, '0.0.0.0', () => {
