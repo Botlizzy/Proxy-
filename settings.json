@@ -1,14 +1,16 @@
 {
   "version": "1.0.0",
   "aimbot": {
-    "head": true,
+    "rim_assist": false,
     "neck": false,
     "chest": false,
-    "rim_assist": false,
+    "wear_shoulder": false,
+    "wear_shoulder_chest": false,
+    "bypass": true,
+    "bypass_entire": true,
+    "play": true,
     "back_jump": false,
     "jump_enhance": false,
-    "bypass": true,
-    "protection": true,
     "fov": 90,
     "smoothness": 0.5
   }
