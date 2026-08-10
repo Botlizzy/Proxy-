@@ -1,0 +1,12 @@
+{
+  "name": "black-proxy",
+  "version": "1.0.0",
+  "description": "Full-featured Free Fire proxy with key/IP system",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
