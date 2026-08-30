@@ -1,0 +1,10 @@
+# Netlify deployment configuration for the ONAH ELIJAH portfolio.
+[build]
+  command = "pnpm build"
+  publish = "dist/public"
+
+# The portfolio uses client-side routing and must always serve the app shell.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -11,3 +11,10 @@
 - [x] Remove readable email and phone literals from the JSX source.
 - [x] Keep visible mail, phone, WhatsApp, and GitHub actions working.
 - [x] Verify the source/build and push the protected-contact update.
+
+## Netlify deployment follow-up
+
+- [ ] Inspect `mydevbio.netlify.app` and the selected repository's build structure.
+- [ ] Add Netlify build configuration and SPA fallback rules if needed.
+- [ ] Build and push the deployment fix.
+- [ ] Verify the public Netlify URL after deployment completes.
