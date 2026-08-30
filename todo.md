@@ -21,6 +21,13 @@
 
 ## Root index deployment fix
 
-- [ ] Add a root-level static `index.html` fallback for Netlify.
-- [ ] Push the root landing page to `Botlizzy/Proxy-`.
-- [ ] Verify the public URL and report whether Netlify has picked up the new commit.
+- [x] Add a root-level static `index.html` fallback for Netlify.
+- [x] Push the root landing page to `Botlizzy/Proxy-`.
+- [x] Verify the public URL and report whether Netlify has picked up the new commit.
+
+## Project list update
+
+- [ ] Review `https://a-ff-panel.vercel.app/` as Sensi Generator and Image Generator.
+- [ ] Review `https://a-test-ten.vercel.app/` as AI Tools and many more features.
+- [x] Remove Black Proxy from the project showcase and static fallback page.
+- [ ] Verify the updated links and push the project-list update.

@@ -28,35 +28,24 @@ const contact = {
 const projects = [
   {
     number: "01",
-    type: "Backend systems / Node.js",
-    title: "Black Proxy",
+    type: "Creative tools / Web app",
+    title: "Sensi Generator",
     description:
-      "A practical Free Fire proxy service with key and IP access controls, shaped around a simple operator experience and dependable server-side behavior.",
-    tags: ["Node.js", "Express", "Access control"],
-    link: "https://github.com/Botlizzy/Proxy-",
-    image: "/manus-storage/elijah-workbench-detail_0f570eb6.png",
+      "An animated Sensi Generator and image-generation experience with a focused access flow and a high-energy visual system.",
+    tags: ["Generator", "Image tools", "Animated UI"],
+    link: "https://a-ff-panel.vercel.app/",
+    image: "/manus-storage/elijah-signal-pattern_e7f8fb25.png",
     featured: true,
   },
   {
     number: "02",
-    type: "Frontend / Product interface",
-    title: "Interface studies",
+    type: "AI product / Authenticated experience",
+    title: "AI Tools",
     description:
-      "A growing collection of thoughtful interface experiments: clear hierarchy, responsive layouts, and small moments of delight that make products easier to use.",
-    tags: ["React", "Responsive UI", "Motion"],
-    link: "https://github.com/Botlizzy",
-    image: "/manus-storage/elijah-signal-pattern_e7f8fb25.png",
-    featured: false,
-  },
-  {
-    number: "03",
-    type: "Independent builds",
-    title: "The next useful thing",
-    description:
-      "New work is in motion. This space is reserved for the next project that earns its place here through clarity, craft, and a real reason to exist.",
-    tags: ["In progress", "Open to ideas"],
-    link: `mailto:${contact.email}?subject=Let's%20build%20something`,
-    image: "/manus-storage/elijah-hero-editorial_42c31fbc.png",
+      "A private AI tools platform with account access, playback-room experiences, and many more features built into one focused product environment.",
+    tags: ["AI tools", "Authentication", "Product UI"],
+    link: "https://a-test-ten.vercel.app/",
+    image: "/manus-storage/elijah-workbench-detail_0f570eb6.png",
     featured: false,
   },
 ];
