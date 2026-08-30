@@ -27,7 +27,13 @@
 
 ## Project list update
 
-- [ ] Review `https://a-ff-panel.vercel.app/` as Sensi Generator and Image Generator.
-- [ ] Review `https://a-test-ten.vercel.app/` as AI Tools and many more features.
+- [x] Review `https://a-ff-panel.vercel.app/` as Sensi Generator and Image Generator.
+- [x] Review `https://a-test-ten.vercel.app/` as AI Tools and many more features.
 - [x] Remove Black Proxy from the project showcase and static fallback page.
-- [ ] Verify the updated links and push the project-list update.
+- [x] Verify the updated links and push the project-list update.
+
+## Screenshot-confirmed project refinement
+
+- [ ] Label the first project ELIMINATOR SENSI GENERATOR and show access code ELIMINATE.
+- [ ] Label the second project ELIZZY DOMAIN and describe video, image generation, AI tools, models, and live scores.
+- [ ] Verify the revised cards and push the update.

@@ -29,10 +29,10 @@ const projects = [
   {
     number: "01",
     type: "Creative tools / Web app",
-    title: "Sensi Generator",
+    title: "ELIMINATOR SENSI GENERATOR",
     description:
-      "An animated Sensi Generator and image-generation experience with a focused access flow and a high-energy visual system.",
-    tags: ["Generator", "Image tools", "Animated UI"],
+      "An animated Sensi Generator and image-generation experience with a focused access flow and a high-energy visual system. Demo access code: ELIMINATE.",
+    tags: ["Generator", "Image tools", "Access: ELIMINATE"],
     link: "https://a-ff-panel.vercel.app/",
     image: "/manus-storage/elijah-signal-pattern_e7f8fb25.png",
     featured: true,
@@ -40,10 +40,10 @@ const projects = [
   {
     number: "02",
     type: "AI product / Authenticated experience",
-    title: "AI Tools",
+    title: "ELIZZY DOMAIN",
     description:
-      "A private AI tools platform with account access, playback-room experiences, and many more features built into one focused product environment.",
-    tags: ["AI tools", "Authentication", "Product UI"],
+      "A private playback and creation platform for video, image generation, AI tools, six connected AI models, and a live football-score experience.",
+    tags: ["Video rooms", "AI tools", "Live scores"],
     link: "https://a-test-ten.vercel.app/",
     image: "/manus-storage/elijah-workbench-detail_0f570eb6.png",
     featured: false,
