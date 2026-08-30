@@ -18,3 +18,9 @@
 - [ ] Add Netlify build configuration and SPA fallback rules if needed.
 - [ ] Build and push the deployment fix.
 - [ ] Verify the public Netlify URL after deployment completes.
+
+## Root index deployment fix
+
+- [ ] Add a root-level static `index.html` fallback for Netlify.
+- [ ] Push the root landing page to `Botlizzy/Proxy-`.
+- [ ] Verify the public URL and report whether Netlify has picked up the new commit.
