@@ -16,6 +16,15 @@ import {
   X,
 } from "lucide-react";
 
+// These values are intentionally not stored as readable literals in the JSX source.
+// This protects against casual source scraping only; browser-visible data is never secret.
+const decodeContact = (codes: number[]) => String.fromCharCode(...codes);
+const contact = {
+  email: decodeContact([101,108,105,106,97,104,99,104,105,110,101,99,104,101,114,101,109,111,110,97,104,64,103,109,97,105,108,46,99,111,109]),
+  phone: decodeContact([43,50,51,52,57,48,51,57,55,50,55,52,57,48]),
+  whatsapp: decodeContact([50,51,52,57,48,51,57,55,50,55,52,57,48]),
+};
+
 const projects = [
   {
     number: "01",
@@ -46,7 +55,7 @@ const projects = [
     description:
       "New work is in motion. This space is reserved for the next project that earns its place here through clarity, craft, and a real reason to exist.",
     tags: ["In progress", "Open to ideas"],
-    link: "mailto:elijahchinecheremonah@gmail.com?subject=Let's%20build%20something",
+    link: `mailto:${contact.email}?subject=Let's%20build%20something`,
     image: "/manus-storage/elijah-hero-editorial_42c31fbc.png",
     featured: false,
   },
@@ -91,7 +100,7 @@ export default function Home() {
               <span>0{navItems.indexOf(item) + 1}</span>{item.label}
             </a>
           ))}
-          <a className="nav-contact" href="mailto:elijahchinecheremonah@gmail.com">Let's talk <ArrowUpRight size={15} /></a>
+          <a className="nav-contact" href={`mailto:${contact.email}`}>Let's talk <ArrowUpRight size={15} /></a>
         </nav>
         <button className="menu-toggle" aria-label={menuOpen ? "Close navigation" : "Open navigation"} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -107,7 +116,7 @@ export default function Home() {
             <p className="hero-intro">I’m <strong>Onah Elijah</strong>, a 19-year-old developer from Nigeria. I turn ideas into clear, useful digital experiences — from dependable backend systems to interfaces that feel good to use.</p>
             <div className="hero-actions">
               <a className="button button-primary" href="#work">Explore my work <ArrowDownRight size={17} /></a>
-              <a className="text-link" href="mailto:elijahchinecheremonah@gmail.com">Start a conversation <MoveRight size={16} /></a>
+              <a className="text-link" href={`mailto:${contact.email}`}>Start a conversation <MoveRight size={16} /></a>
             </div>
           </div>
           <div className="hero-visual reveal-up delay-2">
@@ -139,7 +148,7 @@ export default function Home() {
 
         <section id="contact" className="contact section-wrap">
           <div className="section-index">04 <span>/</span> 04</div>
-          <div className="contact-layout reveal-up"><div><p className="eyebrow">Have a good idea?</p><h2>Let's make<br /><em>it real.</em></h2></div><div className="contact-card"><p>I’m open to freelance projects, collaborations, and conversations with people building something worth caring about.</p><a className="email-link" href="mailto:elijahchinecheremonah@gmail.com">elijahchinecheremonah@gmail.com <ArrowUpRight size={18} /></a><div className="contact-links"><a href="tel:+2349039727490"><Phone size={16} /> +234 903 972 7490</a><a href="https://wa.me/2349039727490" target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp</a><a href="https://github.com/Botlizzy" target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin size={16} /> LinkedIn</a></div></div></div>
+          <div className="contact-layout reveal-up"><div><p className="eyebrow">Have a good idea?</p><h2>Let's make<br /><em>it real.</em></h2></div><div className="contact-card"><p>I’m open to freelance projects, collaborations, and conversations with people building something worth caring about.</p><a className="email-link" href={`mailto:${contact.email}`}>{contact.email} <ArrowUpRight size={18} /></a><div className="contact-links"><a href={`tel:${contact.phone}`}><Phone size={16} /> {contact.phone}</a><a href={`https://wa.me/${contact.whatsapp}`} target="_blank" rel="noreferrer"><MessageCircle size={16} /> WhatsApp</a><a href="https://github.com/Botlizzy" target="_blank" rel="noreferrer"><Github size={16} /> GitHub</a><a href="https://www.linkedin.com" target="_blank" rel="noreferrer"><Linkedin size={16} /> LinkedIn</a></div></div></div>
           <div className="contact-footer"><span>© {new Date().getFullYear()} ONAH ELIJAH</span><span>Built with intention <Sparkles size={15} /></span><a href="#home">Back to top <ArrowUpRight size={15} /></a></div>
         </section>
       </main>
